@@ -129,7 +129,7 @@ function prepareHeader(options, css) {
         return readFile(options.header, 'utf8');
       })
       .then(headerContent => {
-        const preparedHeader = utils.qualifyImgSources(headerContent, options);
+        const preparedHeader = headerContent;
 
         // Compile the header template
         const headerHtml = headerTemplate({
